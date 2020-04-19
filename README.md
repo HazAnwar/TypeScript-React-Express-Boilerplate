@@ -1,44 +1,43 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Tesla Web App
 
-## Available Scripts
+**This is an open source project for a web application that interacts with Tesla's official API. This project is not endorced by Tesla in any way, shape or form.**
 
-In the project directory, you can run:
+## Introduction
 
-### `yarn start`
+This web application is built using predominantly TypeScript. The frontend is built in React with a backend running an Express server coupled with Webpack to minify and serve it accordingly. ESLint and Prettier have also been implemented with TypeScript support to maintain code cleanliness.
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Getting Started
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+Clone the project to your local device and install the dependencies by running:
 
-### `yarn test`
+#### `yarn`
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Development Mode
 
-### `yarn build`
+In order to get the application running in a local development mode to make changes with hot reloading, you will need to have two separate bash terminals open and will need to run
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+#### `yarn start:dev`
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+and also
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+#### `yarn start:server`
 
-### `yarn eject`
+in the root folder of each terminal session respectively.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+### Production
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+In order to run the web application in production mode, you can just run
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+#### `yarn start`
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+which will automatically build and serve the frontend and backend simultaneously.
 
-## Learn More
+### Linting
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+In order to run a linting check you can run 
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+#### `yarn lint`
+
+and similarly to fix any linting issues automatically you can run
+
+#### `yarn lint:fix`
