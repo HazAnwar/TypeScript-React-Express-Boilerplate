@@ -18,6 +18,9 @@ code {
   background-size: cover;
   min-height: 100vh;
   display: flex;
+  .home {
+    color: white;
+  }
   .login {
     border: 0.1rem solid darkgray;
     border-radius: 1rem;

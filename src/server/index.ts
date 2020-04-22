@@ -7,6 +7,8 @@ import axios from 'axios';
 
 const PUBLIC_URL: string = process.env.PUBLIC_URL || '';
 const PORT: string = process.env.PORT || '3000';
+const API_URL: string =
+  process.env.API_URL || 'https://owner-api.teslamotors.com';
 
 const app = express();
 
@@ -27,10 +29,10 @@ app.use(
   })
 );
 
-app.post('/api', (req: Request, res: Response) => {
+app.post('/api/login', (req: Request, res: Response) => {
   axios
     .post(
-      'https://owner-api.teslamotors.com/oauth/token',
+      `${API_URL}/oauth/token`,
       {
         grant_type: 'password',
         client_id: process.env.CLIENT_ID,
@@ -44,7 +46,19 @@ app.post('/api', (req: Request, res: Response) => {
         }
       }
     )
-    .then((response) => res.status(200).send(response.data));
+    .then((response) => res.status(200).send(response.data))
+    .catch((response) => res.status(400).send(response.data));
+});
+
+app.get('/api/vehicles', (req: Request, res: Response) => {
+  axios
+    .get(`${API_URL}/api/1/vehicles`, {
+      headers: {
+        Authorization: `Bearer ${req.headers.authorization}`
+      }
+    })
+    .then((response) => res.status(200).send(response.data))
+    .catch((response) => res.status(400).send(response.data));
 });
 
 app.get('*', (_, res) => {
@@ -52,7 +66,14 @@ app.get('*', (_, res) => {
 });
 
 app.listen(PORT, () => {
-  console.log(`Server has started running at http://localhost:${PORT}/ 🚀`);
+  console.log(
+    '\x1b[34m',
+    `${String.fromCodePoint(
+      0x1f680
+    )} Server has started running at http://localhost:${PORT}/ ${String.fromCodePoint(
+      0x1f680
+    )}`
+  );
 });
 
 module.exports = app;
