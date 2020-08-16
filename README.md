@@ -1,10 +1,10 @@
-# Tesla Web App
+# TypeScript Boilerplate (React with Express)
 
-**This is an open source project for a web application that interacts with Tesla's official API. This project is not endorced by Tesla in any way, shape or form.**
+**Please feel free to raise a pull request if you think there's anything else worth adding to this project. Use at own risk. :)**
 
 ## Introduction
 
-This web application is built using predominantly TypeScript. The frontend is built in React with a backend running an Express server coupled with Webpack to minify and serve it accordingly. ESLint and Prettier have also been implemented with TypeScript support to maintain code cleanliness.
+This boilerplate code is built using predominantly TypeScript with yarn. The frontend is built in React with a backend running an Express server coupled with Webpack to minify and serve it accordingly with SASS CSS. Babel, ESLint and Prettier have also been implemented with TypeScript support to maintain code cleanliness.
 
 ## Getting Started
 
@@ -16,7 +16,7 @@ Clone the project to your local device and install the dependencies by running:
 
 In order to get the application running in a local development mode to make changes with hot reloading, you will need to have two separate bash terminals open and will need to run
 
-#### `yarn start:dev`
+#### `yarn start:webapp`
 
 and also
 
