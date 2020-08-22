@@ -18,11 +18,11 @@ In order to get the application running in a local development mode to make chan
 
 ### `yarn start:webapp`
 
-and also
+to get the front-end of the application running (`src/client`) and also
 
 ### `yarn start:server`
 
-in the root folder of each terminal session respectively.
+to get the server of the application running (`src/server`) in the root folder of each terminal session respectively.
 
 ## Run App in Production Mode
 
