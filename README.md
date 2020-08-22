@@ -10,34 +10,34 @@ This boilerplate code is built using predominantly TypeScript with yarn. The fro
 
 Clone the project to your local device and install the dependencies by running:
 
-#### `yarn`
+### `yarn`
 
-### Development Mode
+## Run App in Dev Mode
 
 In order to get the application running in a local development mode to make changes with hot reloading, you will need to have two separate bash terminals open and will need to run
 
-#### `yarn start:webapp`
+### `yarn start:webapp`
 
 and also
 
-#### `yarn start:server`
+### `yarn start:server`
 
 in the root folder of each terminal session respectively.
 
-### Production
+## Run App in Production Mode
 
 In order to run the web application in production mode, you can just run
 
-#### `yarn start`
+### `yarn start`
 
 which will automatically build and serve the frontend and backend simultaneously.
 
-### Linting
+## Linting
 
 In order to run a linting check you can run 
 
-#### `yarn lint`
+### `yarn lint`
 
 and similarly to fix any linting issues automatically you can run
 
-#### `yarn lint:fix`
+### `yarn lint:fix`
