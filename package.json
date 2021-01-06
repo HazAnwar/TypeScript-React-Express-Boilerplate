@@ -23,7 +23,7 @@
     "@types/request": "^2.48.4",
     "@types/webpack": "^4.41.12",
     "@types/webpack-dev-middleware": "^3.7.0",
-    "axios": "^0.19.2",
+    "axios": "^0.21.1",
     "babel-loader": "^8.1.0",
     "body-parser": "^1.19.0",
     "bootstrap": "^4.4.1",
