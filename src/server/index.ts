@@ -1,33 +1,21 @@
-/* eslint-disable @typescript-eslint/camelcase */
-import express from 'express';
+import express, { Application } from 'express';
 import path from 'path';
-import cors from 'cors';
-import bodyParser from 'body-parser';
 
 const PUBLIC_URL: string = process.env.PUBLIC_URL || '';
 const PORT: string = process.env.PORT || '3000';
 
-const app = express();
+const app: Application = express();
 
-app.use(bodyParser.json());
-app.use(cors());
-
-app.use(
-  PUBLIC_URL,
-  express.static(path.resolve(__dirname, '../../dist'), {
-    maxAge: Infinity
-  })
-);
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 
 app.use(
   PUBLIC_URL,
-  express.static(path.resolve(__dirname, '../../public'), {
-    maxAge: '30 days'
-  })
+  express.static(path.resolve(__dirname, '../../build'), { maxAge: Infinity })
 );
 
 app.get('*', (_, res) => {
-  res.sendFile(path.resolve(__dirname, '../../public/index.html'));
+  res.sendFile(path.resolve(__dirname, '../../build/index.html'));
 });
 
 app.listen(PORT, () => {

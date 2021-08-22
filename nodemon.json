@@ -3,8 +3,5 @@
         "src/server"
     ],
     "ext": "ts",
-    "exec": "ts-node ./src/server/index.ts",
-    "env": {
-        "ENV_VARIABLE": "VALUE"
-    }
+    "exec": "ts-node ./src/server/index.ts"
 }
